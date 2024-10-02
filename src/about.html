@@ -4,40 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="aboutcssControl.css">
     <title>Portifolio - About</title>
 </head>
 <body class="bg-primaryBG">
     <header class="flex items-center md:items-end justify-end md:justify-center w-full h-20 pb-1">
         <nav>
-            <img class="md:hidden mr-4" src="./img/icons8-cardápio-50 (1).png" alt="">
+            <button id="hamburguer-button" class="md:hidden mr-4"><img src="./img/icons8-cardápio-50 (1).png" alt=""></button>
             <ul class="hidden md:flex items-center justify-center text-lg font-bold text-primaryText gap-4">
                 <li class="hover:border-b-4 transition-all border-destaque"><a href="./index.html">Home</a></li>
                 <li class="hover:border-b-4 transition-all border-destaque"><a href="./projects.html">Projects</a></li>
-                <li class="border-b-4 transition-all border-destaque"><a href="/about">Sobre</a></li>
+                <li class="border-b-4 transition-all border-destaque"><a href="./about.html">Sobre</a></li>
                 <li class="hover:border-b-4 transition-all border-destaque"><a href="/contact">Contato</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="flex flex-col md:flex-row items-center justify-center mt-28 pb-12 gap-12 md:gap-0">
-            <div class="md:border-2 border-destaque class flex flex-col justify-center items-center gap-10 p-5 md:bg-secondaryBG rounded-md">
-                <img class="md:w-[21.6rem] md:h-[21.6rem] w-60 h-60 rounded-full drop-shadow-img border-2 border-destaque" src="./img/WhatsApp_Image_2024-09-25_at_22.54.28-removebg-preview.png" alt="">
-                <div class="flex gap-2">
-                    <a href=""><img class="drop-shadow-text" src="./img/instagram.png" alt="intagram"></a>
-                    <a href=""><img class="drop-shadow-text" src="./img/github.png" alt="github"></a>
-                    <a href=""><img class="drop-shadow-text" src="./img/linkedin.png" alt="linkedin"></a>
-                </div>
-            </div>
-            <aside class="text-primaryText flex flex-col gap-7 md:w-1/3 md:border-2 border-secondaryText pl-8 md:border-l-0 rounded-md">
+    <nav id="burguer-menu" class="hidden md:hidden right-1 bottom-1 top-1 bg-secondaryBG h-screen w-80 z-50 fixed" >
+        <button id="hamburguer-button-back" class="md:hidden mr-4 float-right"><img class="md:hidden mr-4" src="./img/icons8-cardápio-50 (1).png" alt=""></button>
+        <ul class="text-primaryText mt-20 text-2xl flex flex-col gap-4 p-5">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="./about.html">Sobre</a></li>
+            <li><a href="./contact">Contato</a></li>
+        </ul>
+    </nav>
+    <main id="main" class="z-10">
+        <section class="flex flex-col items-center md:w-3/4 justify-center mt-28 px-20 pb-12 gap-12">
+            <div class="text-primaryText flex flex-col gap-7 pl-8 rounded-md">
                 <div>
-                    <h1 class="text-2xl">Description</h1>
-                    <p class="text-xl text-secondaryText">My name is Lorenzo, i'm a third semester student of analise e desenvolvimentos de sistemas on UniSenac university</p>
+                    <input class="hidden" id="check" type="checkbox">
+
+                    <h1 class="text-2xl">Lorenzo Q. Gonçalves</h1>
+                    <p class="text-xl text-secondaryText">
+                        I am a full stack developer passionate about creating efficient and innovative web solutions. With expertise in JavaScript and Java, I specialize in web application development, with a preference for back-end. My primary tools include React for front-end, Spring Boot for back-end, Tailwind for styling, and SQL for data management.
+                        
+                        I believe that the key to quality code lies in a methodical approach to problem-solving.
+                    </p>
+
+                    <div class="content">
+                        <p class="text-xl mb-5 text-secondaryText">
+                            To achieve this, I use a testing-based approach and thoroughly investigate errors through documentation, forums, and developer communities. I am always eager to learn and stay updated on market trends, which helps me remain relevant in the field.
+                        
+                            I am excited to tackle new challenges and contribute to projects that make a difference.
+                        </p>
+
+                        <label for="check">Less content</label>
+                    </div>
+
+                    <label for="check">Read More</label>
                 </div>
+
                 <div class="flex flex-col gap-6">
-                    <h2 class="text-xl">technologies</h2>
+                    <h2 class="text-xl">Technologies</h2>
                     <div class="flex flex-col gap-7">
                         <h3 class="text-lg">FrontEnd</h3>
-                        <div class="grid grid-cols-5">
+                        <div class="flex flex-wrap gap-4">
                             <img src="./img/javascript.png" alt="">
                             <img src="./img/react.png" alt="">
                             <img src="./img/html.png" alt="">
@@ -48,7 +69,7 @@
     
                     <div class="flex flex-col gap-7">
                         <h3 class="text-lg">BackEnd</h3>
-                        <div class="grid grid-cols-5">
+                        <div class="flex flex-wrap gap-4">
                             <img src="./img/node.png" alt="">
                             <img src="./img/python.png" alt="">
                             <img src="./img/java.png" alt="">
@@ -59,8 +80,9 @@
                         </div>
                     </div>
                 </div>        
-            </aside>
+            </div>
          </section>
     </main>
+    <script src="./scripts/script.js"></script>
 </body>
 </html>

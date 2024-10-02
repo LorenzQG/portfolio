@@ -1,0 +1,18 @@
+.content{
+    display: none;
+}
+
+
+#check:checked ~ .content{
+    display: block;
+}
+
+#check:checked ~ label{
+    display: none;
+}
+
+label{
+    padding: 2px 5px;
+    cursor: pointer;
+    float: right;
+}

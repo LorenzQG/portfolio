@@ -13,7 +13,10 @@ module.exports = {
       "dropShadow":{
         "img": "0 25px 25px rgba(0, 191, 174, 0.6)",
         "text": "0 10px 10px rgba(0, 191, 174, 0.6)",
-      }
+      },
+      "gridTemplateColumns": {
+        "auto": "repeat (autofit, minmax(3rem , 1fr))"
+      },
     },
   },
   plugins: [],
